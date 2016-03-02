@@ -11,7 +11,7 @@ Let's see, you have a webservice returning a list of items that SARAH has to be 
 ## Usage
 For more exemple please see test folder.
 
-``javascript
+```javascript
 const xmlManipulation = require('SARAH_xml_manipulation');
 ...
 xmlManipulation.init('test1.xml', 'test/', 1)
