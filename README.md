@@ -1,10 +1,17 @@
 # SARAH_xml_manipulation
 is a plugin created in order to simplify XML manipulation for grammar update with NodeJS javascript object.
-
 It is based on the version 0.4.4 of [xml2js](https://www.npmjs.com/package/xml2js).
 
-For usage exemple please see test folder.
-```javascript
+## Use case
+Let's see, you have a webservice returning a list of items that SARAH has to be able to recognize in a sentence but you don't feel like writing a REGEX polluting your plugin XML with items like 
+///////// AUTOMATICALLY GENERATED CONTENT FROM HERE
+...
+///////// TO THERE
+
+## Usage
+For more exemple please see test folder.
+
+``javascript
 const xmlManipulation = require('SARAH_xml_manipulation');
 ...
 xmlManipulation.init('test1.xml', 'test/', 1)
