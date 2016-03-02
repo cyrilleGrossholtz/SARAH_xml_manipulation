@@ -1,0 +1,18 @@
+<node>
+  <subnode id="element1">
+    <test>val</test>
+  </subnode>
+  <subnode id="element1">
+    <test>val</test>
+  </subnode>
+  <subnode id="element2">
+    <subsub>anything</subsub>
+    <subsub>anything</subsub>
+    <subsub>
+      <test>val</test>
+    </subsub>
+  </subnode>
+  <subnode id="element1">
+    <test>val</test>
+  </subnode>
+</node>

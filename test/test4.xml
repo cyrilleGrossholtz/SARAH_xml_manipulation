@@ -1,0 +1,14 @@
+<grammar>
+  <rule>
+    <one-of>
+      <item>
+        un texte qui ne veut rien dire
+        <tag>out.action.device="1";out.action._attributes.tts="hello cowboy"</tag>
+      </item>
+      <item>
+        bonjour
+        <tag>out.action.device="1";out.action._attributes.tts="bonjour aussi"</tag>
+      </item>
+    </one-of>
+  </rule>
+</grammar>

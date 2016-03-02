@@ -1,0 +1,15 @@
+{
+  "name": "ldc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "test/test.js",
+  "dependencies": {
+    "xml2js": "^0.4.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "node test/test.js"
+  },
+  "author": "Cyrille GROSSHOLTZ",
+  "license": "ISC"
+}
