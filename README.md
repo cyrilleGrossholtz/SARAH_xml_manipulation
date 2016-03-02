@@ -4,7 +4,7 @@ It is based on the version 0.4.4 of [xml2js](https://www.npmjs.com/package/xml2j
 
 ## SARAH ?
 You should definitely have a look here : [SARAH official website](http://blog.encausse.net/sarah/)
-S.A.R.A.H. is an amazing home automation solution, that will make your HOME reply to your voice. SARAH can be made OFFLINE ! Meaning the speach recognission is local, nothing is send to a third party (in order to avoid this.)[http://www.geek.com/apps/samsung-reminds-smart-tv-owners-their-personal-conversations-may-be-recorded-1647353/]
+S.A.R.A.H. is an amazing home automation solution, that will make your HOME reply to your voice. SARAH can be made OFFLINE ! Meaning the speach recognission is local, nothing is send to a third party [in order to avoid this.](http://www.geek.com/apps/samsung-reminds-smart-tv-owners-their-personal-conversations-may-be-recorded-1647353/)
 
 ## Use case
 Let's see, you have a webservice returning a list of items that SARAH has to be able to recognize in a sentence but you don't feel like writing a REGEX polluting your plugin XML with items like 
