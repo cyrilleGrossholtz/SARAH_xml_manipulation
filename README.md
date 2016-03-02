@@ -4,7 +4,7 @@ is a plugin created in order to simplify XML manipulation for grammar update wit
 It is based on the version 0.4.4 of [xml2js](https://www.npmjs.com/package/xml2js).
 
 For usage exemple please see test folder.
-``javascript
+```javascript
 const xmlManipulation = require('SARAH_xml_manipulation');
 ...
 xmlManipulation.init('test1.xml', 'test/', 1)
