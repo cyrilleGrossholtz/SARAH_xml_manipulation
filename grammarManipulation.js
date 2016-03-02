@@ -1,5 +1,5 @@
 var baseUrl = 'plugins/ldc/';
-var fileName = 'ldc.xml';
+var fileName = 'plugin.xml';
 var fileXML = baseUrl + fileName;
 var shouldLog = 1;
 
