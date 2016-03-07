@@ -33,7 +33,6 @@ function startTest() {
 	beginCheck(xmlManipulation.init('test1.xml', 'test/', 1));
 	xmlManipulation.updateFromRequest(nodePath, newObject, (result) => {
 		endCheck();
-		endCheck()
 		console.log("FINISHED WITH SUCCESS");
 		startTest2();
 	});

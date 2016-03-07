@@ -1,5 +1,5 @@
-var baseUrl = 'plugins/ldc/';
-var fileName = 'plugin.xml';
+var baseUrl = 'plugins/<plugin>/';
+var fileName = '<plugin>.xml';
 var fileXML = baseUrl + fileName;
 var shouldLog = 1;
 
@@ -32,12 +32,12 @@ module.exports = {
 			fileContent = fileContent.replace(/(\n\s*){1,}/mg, '');// delete 
 			if (err) {
 				log("ERROR when getting file : \n" + err, 1);
-				return callback(false)
+				return callback(new Error("ERROR when getting file"));
 			}
 			xml2js.parseString(fileContent, (err, result) => {
 				if (err || result == null || result == undefined) {
-					log("AN ERROR OCCURED when parsing file : \n" + err, 1);
-					return callback({});
+					log("ERROR when parsing file : \n" + err, 1);
+					return callback(new Error("ERROR when parsing file"));
 				}
 				log("STRING PARSED", 2);
 				log(JSON.stringify(result), 2);
@@ -59,9 +59,11 @@ module.exports = {
 
 
 		fs.writeFile(fileXML, fileContent, (err) => {
-			if (err)
+			if (err) {
 				log("ERROR when writing file : \n" + err, 1);
-			callback(!err);
+				return callback(new Error(err));
+			}
+			callback(null);
 		});
 	},
 	log: log

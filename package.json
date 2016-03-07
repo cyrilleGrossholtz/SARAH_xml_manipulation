@@ -2,7 +2,7 @@
   "name": "SARAH_xml_manipulation",
   "version": "1.0.0",
   "description": "",
-  "main": "test/test.js",
+  "main": "xmlManipulation.js",
   "dependencies": {
     "xml2js": "^0.4.4"
   },

@@ -32,7 +32,7 @@ module.exports = {
 				grammarManipulation.overrideGrammar(gramar, callback);
 
 			} else {
-				callback(false);
+				callback(grammar);
 			}
 		});
 	}
