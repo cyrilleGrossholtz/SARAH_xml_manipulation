@@ -6,13 +6,13 @@ var shouldLog = 1;
 const fs = require('fs');
 const xml2js = require('xml2js');
 
-var log = (text, level) => {
+var log = function(text, level) {
 	if (shouldLog >= level)
 		console.log(text);
 };
 
 module.exports = {
-	init: (file, base, log) => {
+	init: function(file, base, log) {
 		if (base !== undefined && base !== null)
 			baseUrl = base;
 		if (file !== undefined && file !== null)
@@ -22,10 +22,10 @@ module.exports = {
 			shouldLog = log;
 		return fileXML;
 	},
-	getGrammar: (callback) => {
+	getGrammar: function(callback) {
 		fs.readFile(fileXML, {
 			encoding: 'utf8'
-		}, (err, fileContent) => {
+		}, function(err, fileContent) {
 			log("###########DEBUT###############", 2);
 			log(fileContent, 2);
 			log("##########/DEBUT################", 2);
@@ -34,7 +34,7 @@ module.exports = {
 				log("ERROR when getting file : \n" + err, 1);
 				return callback(new Error("ERROR when getting file"));
 			}
-			xml2js.parseString(fileContent, (err, result) => {
+			xml2js.parseString(fileContent, function(err, result) {
 				if (err || result == null || result == undefined) {
 					log("ERROR when parsing file : \n" + err, 1);
 					return callback(new Error("ERROR when parsing file"));
@@ -45,7 +45,7 @@ module.exports = {
 			});
 		});
 	},
-	overrideGrammar: (data, callback) => {
+	overrideGrammar: function(data, callback) {
 		var builder = new xml2js.Builder({
 			headless: true,
 			//pretty: true
@@ -58,7 +58,7 @@ module.exports = {
 		log("############/FIN##############", 2);
 
 
-		fs.writeFile(fileXML, fileContent, (err) => {
+		fs.writeFile(fileXML, fileContent, function(err) {
 			if (err) {
 				log("ERROR when writing file : \n" + err, 1);
 				return callback(new Error(err));

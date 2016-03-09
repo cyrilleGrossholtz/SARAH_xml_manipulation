@@ -2,13 +2,13 @@ const grammarManipulation = require('./grammarManipulation');
 
 var shouldLog = 1;
 
-var log = (text, level) => {
+var log = function(text, level) {
 	if (shouldLog >= level)
 		console.log(text);
 }
 
 module.exports = {
-	init: (file, base, log) => {
+	init: function(file, base, log) {
 		if (log !== undefined)
 			shouldLog = log;
 		return grammarManipulation.init(file, base, log);
@@ -18,7 +18,7 @@ module.exports = {
 	@node is the node to replace with the content of result JSON object
 	exemple : rule[2]
 	*/
-	updateFromRequest: (node, result, callback) => {
+	updateFromRequest: function(node, result, callback) {
 		grammarManipulation.getGrammar(function(gramar) {
 			if (gramar !== false) {
 				var elements = node.split(".");
